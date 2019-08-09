@@ -1,0 +1,44 @@
+#Convert ArrayList to string array:
+public static String[] GetStringArray(ArrayList<String> arr)
+{
+String str[]=new String[arr.size()];
+for(int i=0;i<arr.size;i++)
+{
+str[i]=arr.get(i);
+}
+}
+
+#Convert to String array:
+public static String[] GetStringArray(ArrayList<String> list)
+{
+String str[]=new String[arr.size()];
+Object objArr=arr.toArray();
+int i=0;
+for(Object obj:objArr)
+{
+str[i++]=(String)obj;
+}
+return str;
+}
+
+
+#Replace character
+{
+public static void main(String args[])
+{
+String str="Geeks for Geeks";
+int index=6;
+char ch='F';
+str=str.substring(0,index)+ch+str.substring(index+1);
+System.out.println(str);
+}
+}
+
+
+#String to comma seperated list:
+String str="Geeks For Geeks";
+String[] elements=str.split(" ");
+List<String> list=Arrays.asList(elements);
+System.out.println(list); 
+
+

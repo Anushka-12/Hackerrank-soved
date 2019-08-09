@@ -1,0 +1,105 @@
+ #add two binary Strings:
+
+
+ public static String add(String first, String second) {
+    int b1 = Integer.parseInt(first, 2);
+    int b2 = Integer.parseInt(second, 2);
+    int sum = b1 + b2;
+    return Integer.toBinaryString(sum);
+  }
+
+
+
+
+#Find max digit in String 100adff5678vvhh123
+String s1=sc.next();
+String[] str=s1.split("\\D");
+int max=0;
+for(int i=0;i<str.length();i++)
+{
+if(!str[i].isEmpty())
+{
+if(Integer.parseInt(str[i])>max)
+{
+max=Integer.parseInt(str[i]);
+}
+}
+}
+System.out.println(max);
+
+
+
+
+#Rotation check of String:
+static boolean are Rotations(String s1,String s2)
+{
+return (s1.length()==s2.length()) && ((s1+s1).indexOf(s2)!=-1 )
+}
+
+
+
+#Check K anagrams
+
+      boolean areKAnagrams(String s1, String s2, int k)
+     
+{
+        
+ int arr[]=new int[26];
+     
+    int count=0;
+       
+  if(s1.length()==s2.length())
+       
+  {
+         
+for(int i=0;i<s1.length();i++)
+        
+ {
+             
+arr[s1.charAt(i)-'a']++;
+      
+   }
+         
+for(int i=0;i<s2.length();i++)
+      
+   {
+            
+ if(arr[s2.charAt(i)-'a']>0)
+         
+    arr[s2.charAt(i)-'a']--;
+           
+  else
+            
+ count++;
+     
+    }
+       
+  if(count<=k)
+      
+   return true;
+         
+}
+        
+ return false;
+      //add code here.
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

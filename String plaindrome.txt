@@ -1,0 +1,31 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+
+
+class GFG {
+    
+static boolean check(String s)
+   
+ {
+        
+String s3=new StringBuffer(s).reverse().toString();
+    
+   if(s.equals(s3))
+       
+ return true;
+       
+ else
+       
+ return false;
+   
+ }
+	
+public static void main (String[] args) 
+String s1="abcd";
+		
+System.out.println(check(s1));
+		
+	}
+
+}

@@ -1,0 +1,39 @@
+#Left view of Binary tree:
+class Node
+{
+int data;
+Node left,right;
+public Node(int item)
+{
+data=item;
+left=right=null;
+}
+}
+class BinaryTree
+{
+Node root;
+static int max_level=0;
+void leftutil(Node node,int level)
+{
+if(node==null)
+return;
+if(max_level<level)
+{
+System.out.println(" "+node.data);
+max_level=level;
+}
+leftutil(node.left,level+1);
+leftutil(node.right,level+1);
+}
+void leftView()
+{
+leftutil(root,1);
+}
+public static void main(String args[])
+{
+BianryTree tree=new BinaryTree();
+tree.root=new Node(12);
+tree.root.left=new Node(10);
+tree.root.right=new Node(30);
+}
+}

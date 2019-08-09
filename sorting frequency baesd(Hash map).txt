@@ -1,0 +1,30 @@
+#Sort arrays based on frequency:
+while(t!=0)
+{
+int m=sc.nextInt();
+int arr[]=new int[m];
+for(int i=0;i<m;i++)
+{
+arr[i]=sc.nextInt();
+}
+Arrays.sort(a);
+Map<Integer,Integer> map=new LinkedHashMap<>();
+for(int i=0;i<m;i++)
+{
+int count=map.getOrDefault(a[i],0);
+map.put(a[i],count+1);
+}
+
+List<Integer> keys=new ArrayList<>(map.keySet);
+keys.sort((o1,o2)->map.get(o2)-map.get(o1));
+for(Integer ch:keys)
+{
+int t=map.get(ch);
+for(int i=0;i<t;i++)
+{
+System.out.println(ch+" ");
+}
+System.out.println();
+}
+}
+}

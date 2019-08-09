@@ -1,0 +1,44 @@
+#Inorder traversal without recursion
+
+class Node
+{
+int data;
+Node left,right;
+public Node(int item)
+{
+data=item;
+left=right=null;
+}
+}
+
+class BinaryTree
+{
+Node root;
+void inorder()
+{
+if(root==null)
+return;
+Stack<Node> s1=new Stack<Node>();
+Node curr=root;
+while(curr!=null || s.size()>0)
+{
+while(curr!=null)
+{
+s.push(curr);
+curr=curr.left;
+}
+curr=s.pop();
+System.pout.println(curr.data+" ");
+curr=curr.right;
+}
+}
+public static vois main(String args[])
+{
+BinaryTree tree=new BinaryTree();
+tree.root(1);
+tree.root.left=new Node(2);
+tree.root.right=new Node(3);
+tree.root.left.left=new Node(4);
+tree.root.left.right=new Node(5);
+}
+}

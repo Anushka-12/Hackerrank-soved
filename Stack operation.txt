@@ -1,0 +1,108 @@
+#Stack infix to postfix:
+static String infixToPosfix(String exp)
+{
+string res=new String("");
+Stack<Character> st=new Stack<>();
+for(int i=0;i<exp.length;i++)
+{
+char c=exp.charAt(i);
+if(Character.isLetterOrDigit(c))
+result+=c;
+else if(c=='(')
+st.push(c);
+else if(c==')')
+{
+while(!st.empty() && st.peek()!='(')
+res+=st.pop();
+if(!st.empty && st.peek()!='(')
+return "Invalid Expression";
+else
+st.pop();
+}
+else
+while(st.isEmpty() && Prec(c)<=Prec(st.peek()))
+{
+if(st.peek()=='(')
+return "Invalid expression";
+res+=st.pop();
+}
+stack.push(c)'
+}
+}
+
+
+
+
+#Stack Prefix to infix:
+boolean is Operator(char x)
+{
+switch(x)
+{
+case '+':
+case '-':
+case '/':
+case '*':
+return true;
+}
+return false;
+}
+
+String pretoinfx(String exp)
+{
+Stack<String> st=new Stack<String>();
+int length=exp.size();
+for(int i=length-1;i>=0;i--)
+{
+if(isOperator(exp.charAt(i)))
+{
+String op1=exp.peek();
+s.pop();
+String op2=exp.peek();
+s.pop();
+String temp="("+op1+exp.charAt(i)+op2+")";
+s.push(temp);
+}
+else
+{
+s.push(exp.charAt(i));
+}
+}
+return s.top();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 

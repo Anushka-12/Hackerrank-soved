@@ -1,0 +1,110 @@
+Regex fibd occurnce of character:
+class Match
+{
+public static long count(String s,char c)
+{
+Matcher match=Pattern.compile(String.valueOf(ch)).matcher(s);
+int res=0;
+while(matcher.find())
+res++;
+return res;
+}
+public static void main(Strig args[])
+{
+String s1="geeks for geeks";
+char c='e';
+System.out.println(count(str,c));
+}
+}
+
+
+
+#String functions:
+class GFG{
+
+static boolean Ignore(String s1,String s2)
+{
+int i=0;
+s1=s1.toUpperCase();
+s2=s2.toUpperCase();
+int x=s1.compareTo(s2);
+if(x!=0)
+return false;
+else 
+return true;
+}
+static void equalIgnoreCase(String s1,String s2)
+{
+boolean res=Ignore(s1,s2);
+if(res==true)
+{
+System.out.println("Same");
+}
+else
+{
+System.out.println("Not Same")
+}
+}
+
+public static void main(String args[])
+{
+string s1="Geeks";
+string s2="geeks";
+equalIgnoreCase(s1,s2)
+}}
+
+
+
+
+
+
+
+#String regex replace capital at end:
+public class GFG
+{
+static public String move(String s)
+{
+return s.replaceAll("[A-Z]","")+s.replaceAll("[^A-Z]+","");
+}
+public static void main(String args[])
+{
+String str="Geeks for Geeks and Java";
+System.out.println("Before operation"+str);
+System.out.println("After operation"+"move(str)");
+}
+}
+
+
+
+
+
+
+
+
+
+
+#String insert in between another:
+class GFG
+{
+static String new(String orig,String add,int index)
+{
+String newString=orig.substring(0,index+1)+add+orig.substring(index=1);
+return newString;
+}
+
+public static void main(string args[])
+{
+String orig="GeeksGeeks";
+String add="For";
+int index=4;
+System.out.println(new(orig,add,4));
+}
+}
+
+
+
+
+
+
+
+}

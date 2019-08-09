@@ -1,0 +1,22 @@
+import java.math.BigInteger;
+class GFG
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int t=sc.nextInt();
+while(t>0)
+{
+BigInteger n=sc.nextInt();
+BigInteger x=BigInteger.valueOf(10);
+BigInteger y=BigInteger.valueOf(5);
+BigInteger z=BigInteger.valueOf(10);
+BigInteger rem=n.mod(x);
+if(rem.compareTo(y)<=0)
+System.out.println(n.subtract(rem));
+else
+System.out.println(n.add(x.subtract(rem)));
+t--;
+}
+}
+}

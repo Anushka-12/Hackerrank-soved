@@ -1,0 +1,54 @@
+Linked List:
+class Node
+{
+int data;
+Node next;
+Node(int d)
+{
+data=d;
+next=null;
+}
+}
+class LinkedList
+{
+Node head;
+public void push(int new_data)
+{
+Node newnode=new Node(new_data);
+newnode.next=head;
+head=newnode;
+}
+public int getCount()
+{
+Node temp=head;
+int count=0;
+while(temp!=null)
+{
+count++;
+temp=temp.next;
+}
+return count;
+}
+public static void main(String[] args)
+{
+LinkedList list=new LinkedList();
+list.push(1);
+list.push(2);
+list.push(3);
+S.o.p(list.getCount());
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

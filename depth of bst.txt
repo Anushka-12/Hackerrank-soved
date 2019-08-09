@@ -1,0 +1,19 @@
+#Depth of bst:
+int maxDepth(Node node)
+{
+if(node==null)
+return;
+else
+{
+int ldepth=maxDepth(node.left);
+int rdepth=maxDepth(node.right);
+if(ldepth>rdepth)
+return (ldepth+1);
+else
+return (rdepth+1);
+}
+}
+
+
+#Print ancestors:
+boolean

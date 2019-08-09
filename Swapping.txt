@@ -1,0 +1,19 @@
+#Minimum swaps needed to sort an array:
+static int minSwap(int arr[])
+{
+int c=0;
+for(int i=0;i<n-1;i++)
+{
+int index=0;
+int flag=0;
+int x=a[i];
+for(int j=i+1;j<n;j++)
+{
+if(x>a[j])
+{
+flag++;
+index=j;
+x=a[j];
+}
+}
+if()

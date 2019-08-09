@@ -1,0 +1,58 @@
+Algorithm for Prefix to Infix:
+
+Read the Prefix expression in reverse order (from right to left)
+If the symbol is an operand, then push it onto the Stack
+If the symbol is an operator, then pop two operands from the Stack
+Create a string by concatenating the two operands and the operator between them.
+string = (operand1 + operator + operand2)
+And push the resultant string back to Stack
+Repeat the above steps until end of Prefix expression.
+filter_none
+
+
+______________________________________________________________Program:(Prefix to  Infix)
+#include <iostream.h>
+#include <stack>
+
+bool isOperator(char x)
+{
+switch(x)
+{
+case '+':
+case '-':
+case '/';
+case '*';
+return true;
+}
+return false;
+}
+
+string(string exp)
+{
+stack<string> s;
+int length=exp.size();
+for(int i=length-1;i>=0;i--)
+{
+if(isOperator(exp[i]))
+string op1=s.top();
+s.pop();
+string op2=s.top();
+s.pop();
+
+string temp="("+op1+exp[i]+op2+")";
+s.push(temp);
+}
+else
+{
+s.push(string(1,exp[i]));
+}
+}
+return s.top();
+}
+
+int main()
+{
+string preexp="*-A/BC-/AKL";
+cout<<"Infix : "<<pretoinfix(pre_exp);
+return 0;
+}

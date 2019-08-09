@@ -1,0 +1,54 @@
+#Move last node to front:
+void move
+{
+if(head==null || head.next==null)
+return;
+Node seclast=null;
+Node last=head;
+while(last.next!=null)
+{
+seclast=last;
+last=last.next;
+}
+seclast.next=null;
+last.next=head;
+head=last;
+}
+
+
+
+#Swapping pairwise:
+vpid pairwiseswap
+{
+Node temp=head;
+while(temp!=null && temp.next!=null)
+{
+int k=temp.data;
+temp.data=temp.next.data;
+temp.next.data=k;
+temp=temp.next.next;
+}
+}
+
+
+#Remove duplicates:
+static void duplicates(node head)
+{
+HashSet<Integer> hs=new HashSet<Integer>();
+Node current=head;
+Node prev=null;
+while(current!=null)
+{
+int val=current.data;
+if(hs.contains(val))
+{
+prev.next=current.next;
+}
+else
+{
+hs.add(val);
+prev=current;
+}
+current.next;
+}
+}

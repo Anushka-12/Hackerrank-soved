@@ -1,0 +1,46 @@
+#Use of Buffer:
+public static String insert(String orig,int add,int index)
+{
+StringBuffer s1=StringBuffer(orig);
+s1.insert(index+1,add);
+return s1.tostring();
+}
+
+#Use of RandomString:
+class GFG
+{
+class RandomString
+{
+static getAlphaNumericString(int n)
+{
+String AlphaNumericString="ABCDEFGHIJKLMNOPQRSTUVWXYZ"+"0123456789"+"abcdefghijklmnopqrstuvwxyz";
+StringBuilder sb=new StringBuilder(n);
+for(int i=0;i<n;i++)
+{
+int index=(int)(AlphaNumericString.length()*Math.random()_;
+sb.append(AlphaNumericString.charAt(index));
+}
+return sb.toString();
+}
+public static void main(String args[])
+{
+int n=20;
+System.out.println(RandomString.getAlphaNumericString(n));
+}
+}
+
+
+
+#Comma Seperated String:
+class GFG
+{
+public static void main(String args[])
+{
+List<String> list=new ArrayList(Arrays.asList("Geeks","ForGeeks","GeeksForGeeks"));
+System.out.println("List of String",+list);
+String s1=String.join(",",l1);
+System.out.println(Comma seperated string"+string);
+}
+}
+
+System,out

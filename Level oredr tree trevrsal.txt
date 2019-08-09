@@ -1,0 +1,87 @@
+#Inorder tree traversal without recursion:
+void Inorder()
+{
+if(root==null)
+return;
+Stack<Node> s=new Stack<Node>();
+Node curr=root;
+while(curr!=null && s.size()>0)
+{
+while(curr!=null)
+{
+s.push(curr);
+curr=curr.left;
+}
+
+curr=s.pop();
+System.out.println(curr.data);
+curr=curr.right;
+}
+
+
+
+
+
+#Level Order Tree traversal:
+void printLevel()
+{
+int h=height(root);
+int i;
+for(i=0;i<=h;i++)
+{
+printGivenLevel(root,i);
+}
+}
+
+
+
+int height(Node root)
+{
+if(root==null)
+return 0;
+else
+{
+int l=height(root.left);
+int r=height(root.right);
+if(l>r)
+return (l+1);
+else
+return (r+1);
+}
+}
+
+
+void printGivenLevel(Node root,int level)
+{
+if(root==null)
+return;
+if(level==1)
+System.out.println(root.data);
+else if(level>1)
+{
+printGivenLevel(root.left,level-1);
+printGivenLevel(root.right,level-1);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

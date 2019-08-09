@@ -1,0 +1,315 @@
+#Rotate Linked list:
+void rotate(int k)
+{
+if(k==0)
+return;
+Node current=head;
+int count=1;
+while(count<k && current!=null)
+{
+current=current.next;
+count++;
+}
+if(current=null)
+return;
+Node kthnode=current;
+while(current.next!=null)
+{
+current=current.next;
+}
+current.next=head;
+head=kthnode.next;
+kthnode.next=null;
+}
+
+
+
+
+#Adding two linked list:
+Node addtwolists(Node first,Node second)
+{
+Node res=null;
+Node prev=null;
+Node temp=null;
+int carry=0,sum;
+while(first!=null || second!=null)
+{
+sum=carry+(first!=null?first.data:0)+(second!=null?second.data:0);
+carry=(sum>=10)?1:0;
+sum=sum%10;
+temp=new Node(sum);
+if(res==null)
+{
+res=temp;
+}
+else
+{
+prev.next=temp;
+}
+prev=temp;
+if(first!=null)
+{
+first=first.next;
+}
+if(second!=null)
+{
+second=second.next;
+}
+}
+if(carry>0)
+{
+temp.next=new Node(carry);
+}
+return res;
+}
+
+
+
+#Detect a loop in a linked list:
+int detectloop(Node node)
+{
+Node slow=node,fast=node;
+while(slow!=null && fast.next!=null && fast!=null)
+{
+slow=slow.next;
+fast=fast.next.next;
+}
+
+if(slow==fast)
+return 1;
+
+else
+return 0;
+}
+
+
+
+#Reverse node in groups:
+Node reverse(Node head,int k)
+{
+Node current=head;
+Node prev=null;
+Node next=null;
+int count=0;
+while(count<k && current1=null)
+{
+next=current.next;
+current.next=prev
+prev=current;
+current=next;
+count++;
+}
+if(next!=null)
+head.next=reverse(next,k);
+return prev;
+}
+
+
+
+
+
+#Merge sort two lists:
+Node sortedMerge(Node headA,Node headB)
+{
+Node dummy=new Node(0);
+Node tail=dummynode;
+while(true)
+{
+if(headA==null)
+{
+tail.next=headB;
+break;
+}
+if(headB==null)
+{
+tail.next=headA;
+break;
+}
+if(headA.data<=headB.data)
+{
+tail.next=headA;
+headA=headA.next;
+}
+else
+{
+tail.next=headB;
+headB=headB.next;
+}
+tail=tail.next;
+}
+return dummyNode.next;
+}
+}
+
+
+
+
+
+#Reverse a linked list
+Node reverse(Node node)
+{
+Node prev=null;
+Node current=node;
+Node next=null;
+while(current!=null)
+{
+next=current.next;
+current.next=prev;
+prev=current;
+current=next;
+}
+node =prev;
+return node;
+}
+
+
+
+#Swapping Nodes
+void swapNodes(int x,int y)
+{
+if(x==y)
+return;
+Node prevX=null,currX=head;
+while(currX!=null && currX.data!=x)
+{
+prevX=currX;
+currX=currX.next;
+}
+
+Node prevY=null,,currY=head;
+while(currY!=null &&  curr.data!=y)
+{
+prevY=currY;
+currY=currY.next;
+}
+if(currX==null || currY==null)
+return;
+if(prevX!=null)
+prevX.next=currY;
+else
+head=currY;
+
+
+
+if(prevY!=null)
+prevY.next=currY;
+else
+head=currY;
+
+
+Node temp=currX.next;
+currX.next=currY.next;
+currY.next=temp;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

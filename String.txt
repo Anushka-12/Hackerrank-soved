@@ -1,0 +1,44 @@
+#String reverse function:
+String s[]="I like coding very much".split(" ");
+String s1="";
+for(int i=s.length()-1;i>=0;i--)
+{
+s1+=s[i]+" ";
+}
+System.out.println("Reversed String"+s1.substring(o,s1.length()-1));
+
+
+#Permutation:
+void permute(String str,int l,int r)
+{
+if(l==r)
+System.out.println(str);
+else
+{
+for(int i=l;i<=r;i++)
+{
+str=swap(str,l,i);
+permute(str,l+1,r);
+str=swap(str,l,i);
+}
+}
+}
+void swap(String a,int i,int j)
+{
+char temp;
+char[] charArray=a.toCharArray();
+temp=charArray[i];
+charArray[i]=charAarry[j];
+charArray[j]=temp;
+return String.valueOf(charArray);
+}
+
+
+
+
+#Find a string in java
+String s1="I love you";
+String s2="love";
+Boolean found=Arrays.asList(s1.split(" ")).contains(s2);
+if(found)
+System.out.println("found");

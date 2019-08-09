@@ -1,0 +1,27 @@
+Is a square:
+
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int t=sc.nextint();
+for(int i=0;i<t;i++)
+{
+int[] point=new int[8];
+for(int i=0;i<8;i++)
+{
+point[i]=sc.nextInt();
+}
+String flag="NO";
+if(Math.pow(point[2]-point[0],2)+Math.pow(point[3]-point[5],2)==Math.pow(point[4]-point[6],2)+Math.pow(point[1]-point[7],2))
+{
+  if(Math.abs(point[2]-point[0])==Math.abs(point[4]-point[6]) && (Math.abs(point[1]-point[7]) == Math.abs(point[1]-point[7]))
+{
+if(point[0]!=point[2] || point[0]!=point[4] || point[0]!=point[6])
+flag="YES";
+}
+}
+}
+System.out.println(flag);
+}
+}
+}

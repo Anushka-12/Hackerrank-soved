@@ -1,0 +1,125 @@
+//Get Nth node in linkedlist:
+public int getNth(int index)
+{
+Node current=head;
+int count=0;
+while(current!=null)
+{
+if(count==index)
+return current.data;
+count++;
+current =current.next;
+}
+assert(false);
+return 0;
+}
+
+//Print middle element of linkedlist
+void printMiddle()
+{
+Node slow=head;
+Node fast=head;
+if(head!=null)
+{
+while(fast!=null && fast.next!=null)
+{
+fast=fast.next.next;
+slow=slow.next;
+}
+System.out.println(slow);
+}
+}
+
+
+//Printlist:
+void printlist()
+{
+Node tnode=head;
+while(tnode!=null)
+{
+S.o.p(tnode.data);
+tnode=tnode.next;
+}
+s.o.p("NULL");
+}
+
+
+
+
+
+//Nth linked list from last:
+void print(int n)
+{
+Node temp=head;
+int len=0;
+while(temp!=null)
+{
+len++;
+temp=temp.next;
+}
+if(len<n)
+return;
+temp=head;
+for(int i=1;i<len-n+1;i++)
+{
+temp=temp.next;
+}
+s.o.p(temp.data);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
